@@ -1,0 +1,103 @@
+.styled-button:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  filter: grayscale(0.3);
+
+  transform: none !important;
+
+}
+
+
+
+.screen-pulse {
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  width: 0;
+  height: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 0, 60, 0.452);
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  opacity: 0;
+
+}
+
+
+.screen-pulse.active {
+
+  animation: screenPulse 1s ease-out;
+
+}
+
+
+
+
+@keyframes screenPulse {
+
+  0% {
+
+    width: 0;
+    height: 0;
+
+    opacity: 0.8;
+
+  }
+
+  100% {
+
+    width: 250vmax;
+    height: 250vmax;
+
+    opacity: 0;
+
+  }
+
+}
+
+
+
+.error-message {
+
+  margin-top: 14px;
+
+  color: #ff1f1f;
+
+  font-size: 16px;
+
+  font-family: Roboto, sans-serif;
+
+  text-align: center;
+
+  letter-spacing: 0.4px;
+
+  display: none;
+
+  text-shadow:
+    0 0 10px rgb(255, 82, 82);
+
+}
+
+
+body.dark .error-message {
+
+  color: #ff5252;
+
+  text-shadow:
+    0 0 10px rgb(255, 82, 82);
+
+
+}

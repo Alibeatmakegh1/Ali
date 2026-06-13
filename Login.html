@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign In | Alibeatmaker</title>
+
+    <link rel="stylesheet" href="../Login/Login.css">
+    <link rel="stylesheet" href="../rate-limit/rate-limit.css">
+</head>
+<body>
+
+<main>
+    <div class="animated-bg"></div>
+
+    <div class="theme-switch">
+        <button id="themeBtn" class="toggle">
+            <span class="toggle__icon">🌙</span>
+        </button>
+    </div>
+
+    <form class="form" id="authForm">
+        <div class="form__cover"></div>
+
+        <div class="form__content">
+            <h1 class="form__title" id="hackTitle">
+                <span class="title-char">L</span>
+                <span class="title-char">O</span>
+                <span class="title-char">G</span>
+                <span class="title-char">I</span>
+                <span class="title-char">N</span>
+            </h1>
+
+            <!-- Email Input -->
+            <div class="form__group">
+                <div class="styled-input">
+                    <input type="email" class="styled-input__input" name="email" required>
+                    <label class="styled-input__label">Email</label>
+                </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form__group">
+                <div class="styled-input">
+                    <input type="password" class="styled-input__input" id="password" required>
+                    <label class="styled-input__label">Password</label>
+                    <span class="eye-toggle" id="togglePassword">
+                        <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                            <path class="eye-open" fill="none" stroke="currentColor" stroke-width="2" d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+                            <circle class="eye-open" fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="12" r="3"/>
+                            <path class="eye-closed" fill="none" stroke="currentColor" stroke-width="2" d="M3.5 13c4-6 13-6 17 0"/>
+                            <path class="eye-slash" fill="none" stroke="currentColor" stroke-width="2" d="M3 3c6 6 12 12 18 18"/>
+                            <path class="eyelash lash1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4.5 10.3 L6.3 7.9"/>
+                            <path class="eyelash lash2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9.2 9.6 L11 7.3"/>
+                            <path class="eyelash lash3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M13.8 9.6 L15.6 7.3"/>
+                            <path class="eyelash lash4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M18.5 10.3 L20.3 7.9"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <p class="error-message" id="errorMsg"></p>
+            <p class="success-message" id="successMsg"></p>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button" id="submitBtn">
+                <span class="button-text">Sign In</span>
+            </button>
+
+            <!-- Links -->
+            <a href="../Reset-Password/Reset-Password.html" class="back-button">
+                Forgot Password?
+            </a>
+
+            <a href="../Register/Register.html" class="back-button">
+                Create Account
+            </a>
+        </div>
+    </form>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../rate-limit/rate-limit.js"></script>
+<script src="../Login/Login.js"></script>
+<script src="../auth/auth.js"></script>
+
+</body>
+</html>
